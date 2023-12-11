@@ -753,7 +753,7 @@ def leitorMenu():
                 if not busca2:
                     print("\n\t\033[31mEsse ID não está vinculado a nenhuma notícia.\n\033[m")
 
-            elif pgL1 == "2": #Falta Testar
+            elif pgL1 == "2":
                 noticias_assunto = []
                 while True:
                     verId3 = input('\nDigite o Assunto que você quer buscar: ')
