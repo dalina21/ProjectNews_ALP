@@ -12,6 +12,7 @@ novo_coment = {}
 dados = {}
 coment_users = []
 
+#O ID está começando por 1 devido a notícia que deixei pré-cadastrada
 # Informações pré-cadastradas para testes
 dados['dalina'] = {'senha': '1231', 'tipo': 'r', 'nome': 'Dalina'}
 dados['daniel'] = {'senha': '1231', 'tipo': 'r', 'nome': 'Daniel'}
