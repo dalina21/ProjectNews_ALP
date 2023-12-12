@@ -1,7 +1,7 @@
 import openai
 import textwrap
 
-chave = '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'
+chave = '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'
 openai.api_key = chave
 
 def PesquisarChatGPT(conteudo):

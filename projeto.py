@@ -37,6 +37,7 @@ noticias = [
      "Comentarios": [],
      "Curtidas": 0}
 ]
+SalvarNoticias(noticias, 'dalina')
 
 def criarConta():
     while True:
@@ -206,7 +207,9 @@ def reporterMenu():
                     for noticia in noticias:
                         id = noticia['ID']
                     print(f'\t=> O ID dessa notícia é: {id}\n')
+
                     break
+
                 else:
                     print('\n\t\033[31mData Inválida!\n\033[m')
                     print('Digite novamente: ')
@@ -309,19 +312,18 @@ def reporterMenu():
                                                         SalvarNoticias(noticias, user_reporter['reporter'])
                                                         break
                                                     else:
-                                                        print('\n\t\033[31mÉ preciso digitar alguma informação no campo do Título!\033[m')
+                                                        print('\n\t\033[31mÉ preciso digitar alguma informação no campo do Título!\n\033[m')
                                                         continue
 
                                             elif resp_02.lower() == 'd':
                                                 while True:
                                                     noticia['Descricao'] = input("Digite a nova descrição: ")
-                                                    if noticia['Titulo']:
+                                                    if noticia['Descricao']:
                                                         print("\n\t\033[32mNotícia atualizada com sucesso!\n\033[m")
                                                         SalvarNoticias(noticias, user_reporter['reporter'])
                                                         break
                                                     else:
-                                                        print(
-                                                            '\n\t\033[31mÉ preciso digitar alguma informação no campo da Descrição!\033[m')
+                                                        print('\n\t\033[31mÉ preciso digitar alguma informação no campo da Descrição!\n\033[m')
                                                         continue
                                             elif resp_02.lower() == 'n':
                                                 while True:
@@ -331,8 +333,7 @@ def reporterMenu():
                                                         SalvarNoticias(noticias, user_reporter['reporter'])
                                                         break
                                                     else:
-                                                        print('\n\t\033[31mÉ preciso digitar alguma informação no campo da Notícia!\033[m')
-
+                                                        print('\n\t\033[31mÉ preciso digitar alguma informação no campo da Notícia!\n\033[m')
                                                         continue
                                             elif resp_02.lower() == 'dt':
                                                 while True:
