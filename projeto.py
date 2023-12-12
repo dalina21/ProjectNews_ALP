@@ -562,13 +562,13 @@ def reporterMenu():
                         print('-' * 61)
                         print(f'\n\t======= Notícias do usuário(a): {user}  =======\n')
 
-                        n = len(noticia_user)
-                        for i in range(n):
-                            for j in range(0, n - i - 1):
-                                if noticia_user[j]['Curtidas'] < noticia_user[j + 1]['Curtidas']:
-                                    auxiliar = noticia_user[j]
-                                    noticia_user[j] = noticia_user[j + 1]
-                                    noticia_user[j + 1] = auxiliar
+                        contador = len(noticia_user)
+                        for i in range(contador):
+                            for i2 in range(0, contador - i - 1):
+                                if noticia_user[i2]['Curtidas'] < noticia_user[i2 + 1]['Curtidas']:
+                                    auxiliar = noticia_user[i2]
+                                    noticia_user[i2] = noticia_user[i2 + 1]
+                                    noticia_user[i2 + 1] = auxiliar
 
                         for noticia in noticia_user:
                             print('-' * 61)
@@ -588,13 +588,13 @@ def reporterMenu():
 
                 elif visualizar == '3':
                     if noticias:
-                        n = len(noticias)
-                        for i in range(n):
-                            for j in range(0, n - i - 1):
-                                if noticias[j]['Curtidas'] < noticias[j + 1]['Curtidas']:
-                                    auxiliar = noticias[j]
-                                    noticias[j] = noticias[j + 1]
-                                    noticias[j + 1] = auxiliar
+                        contador = len(noticias)
+                        for i in range(contador):
+                            for i2 in range(0, contador - i - 1):
+                                if noticias[i2]['Curtidas'] < noticias[i2 + 1]['Curtidas']:
+                                    auxiliar = noticias[i2]
+                                    noticias[i2] = noticias[i2 + 1]
+                                    noticias[i2 + 1] = auxiliar
 
                         for noticia in noticias:
                             print('-' * 61)
@@ -772,13 +772,13 @@ def leitorMenu():
                         assunto = True
                         noticias_assunto.append(noticia)
 
-                n = len(noticias_assunto)
-                for i in range(n):
-                    for j in range(0, n - i - 1):
-                        if noticias_assunto[j]['Curtidas'] < noticias_assunto[j + 1]['Curtidas']:
-                            auxiliar = noticias_assunto[j]
-                            noticias_assunto[j] = noticias_assunto[j + 1]
-                            noticias_assunto[j + 1] = auxiliar
+                contador = len(noticias_assunto)
+                for i in range(contador):
+                    for i2 in range(0, contador - i - 1):
+                        if noticias_assunto[i2]['Curtidas'] < noticias_assunto[i2 + 1]['Curtidas']:
+                            auxiliar = noticias_assunto[i2]
+                            noticias_assunto[i2] = noticias_assunto[i2 + 1]
+                            noticias_assunto[i2 + 1] = auxiliar
 
                 for noticia in noticias_assunto:
                     print('-' * 61)
